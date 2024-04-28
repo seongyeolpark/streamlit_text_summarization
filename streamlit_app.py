@@ -6,6 +6,11 @@ from langchain.chains.summarize import load_summarize_chain
 
 openai_api_key = st.secrets["OPEN_API_KEY"]
 
+instructions = """
+#봇 정보
+ - 한글로 대답해줘
+"""
+
 def generate_response(txt):
     # Instantiate the LLM model
     llm = OpenAI(temperature=0, openai_api_key=openai_api_key)
